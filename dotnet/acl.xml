@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<acl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <group name="Everyone">
+    <acl name="Default" />
+    <object name="user.*" />
+    <object name="resource.*" />
+  </group>
+  <group name="Moderator">
+    <acl name="Moderator" />
+  </group>
+  <group name="Admin">
+    <acl name="Moderator" />
+    <acl name="Admin" />
+  </group>
+  <acl name="Default">
+    <right name="command.kick" access="false" />
+  </acl>
+  <acl name="Moderator">
+    <right name="command.kick" access="true" />
+  </acl>
+  <acl name="Admin">
+    <right name="command.stop" access="true" />
+  </acl>
+</acl>
